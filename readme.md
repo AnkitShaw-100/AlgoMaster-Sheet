@@ -17,41 +17,8 @@ This repository provides structured, problem-solving patterns with:
 ├── readme.md        # Project documentation
 ```
 
-## Array Problems
-
-### Problems 1-5: Array Fundamentals
-
-Core array manipulation techniques and problem-solving patterns:
-
-1. **Move Zeroes** – Two-pointer approach for in-place modifications
-2. **Remove Duplicates** – Handling sorted arrays with duplicate removal
-3. **Best Time to Buy and Sell Stock** – Greedy algorithm with tracking
-4. **Majority Element** – Frequency counting and threshold detection
-5. **Rotate Array** – Array transformation and modular arithmetic
-
-[View Array 1-5 Solutions](Array/Array-1-5.md)
-
-## How to Use
-
-1. Navigate to the relevant topic folder (e.g., `Array/`)
-2. Open the markdown file with detailed explanations and code
-3. Review the problem statement, approach, and implementation
-4. Analyze time and space complexity
-
-## Problem-Solving Techniques
-
-- Two-pointer technique
-- Greedy algorithms
-- Hash-based approaches
-- In-place modifications
-- Frequency counting
-
 ## Tech Stack
 
 - **Language:** Java
 - **Paradigm:** Object-Oriented Programming
 - **Complexity Focus:** Time and Space Optimization
-
----
-
-*Last updated: 2026*
