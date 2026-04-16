@@ -149,6 +149,73 @@ class Solution {
 
 ---
 
+### 4. Longest Common Prefix
+
+#### Problem
+
+Given an array of strings `strs`, find the longest common prefix shared among all the strings. If there is no common prefix, return an empty string `""`.
+
+#### Solution Strategy
+
+Instead of comparing all strings pairwise, we can optimize by:
+
+* Sorting the array of strings lexicographically
+* After sorting:
+
+  * The **first** and **last** strings will be the most different
+  * The common prefix of these two strings will be the common prefix of the entire array
+
+### Steps
+
+1. Sort the array
+2. Take:
+
+   * `s1 = first string`
+   * `s2 = last string`
+3. Compare characters of `s1` and `s2` one by one
+4. Stop when characters differ
+5. Return the substring up to that index
+
+This works because sorting ensures that strings with similar prefixes are grouped together.
+
+#### Complexity
+
+Time: O(n log n)
+Space: O(1)
+
+#### Implementation
+
+```java
+import java.util.Arrays;
+
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        Arrays.sort(strs);
+
+        String s1 = strs[0];
+        String s2 = strs[strs.length - 1];
+
+        int idx = 0;
+
+        while (idx < s1.length() && idx < s2.length()) {
+            if (s1.charAt(idx) == s2.charAt(idx)) {
+                idx++;
+            } else {
+                break;
+            }
+        }
+
+        return s1.substring(0, idx);
+    }
+}
+```
+
+#### Key Insight
+
+Sorting reduces the problem to comparing just two strings instead of all of them. The first and last elements after sorting represent the maximum possible mismatch, so their common prefix guarantees correctness for the entire array.
+
+---
+
 ## Key Concepts Covered
 
 * Two-pointer technique
